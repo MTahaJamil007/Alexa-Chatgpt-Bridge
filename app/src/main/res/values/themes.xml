@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.VoiceLink" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#FF6200EE</item>
+        <item name="colorPrimaryDark">#FF3700B3</item>
+        <item name="colorAccent">#FF03DAC5</item>
+    </style>
+</resources>

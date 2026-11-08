@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">VoiceLink</string>
+    <string name="service_description">VoiceLink automation service — reads screen content to locate and tap the voice-mode button in ChatGPT.</string>
+    <string name="permission_overlay">Draw over other apps</string>
+    <string name="permission_accessibility">Accessibility service</string>
+    <string name="permission_notifications">Notifications</string>
+    <string name="status_granted">Granted</string>
+    <string name="status_denied">Not granted</string>
+    <string name="btn_fix">Fix</string>
+    <string name="btn_run">Run sequence</string>
+    <string name="btn_close">Close target</string>
+    <string name="btn_copy_intent">Copy MacroDroid intent</string>
+    <string name="btn_clear_log">Clear</string>
+    <string name="hint_permissions">Grant overlay and accessibility permissions first</string>
+    <string name="toast_intent_copied">Copied! In MacroDroid: Send Intent → Action = com.local.voicelink.START, Target = Broadcast Receiver</string>
+    <string name="toast_target_not_installed">Target app is not installed on this device</string>
+    <string name="label_settings">Settings</string>
+    <string name="label_log">Log</string>
+    <string name="label_permissions">Permissions</string>
+</resources>
