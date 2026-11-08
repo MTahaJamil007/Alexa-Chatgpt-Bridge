@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Permissions Card -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_permissions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Overlay permission row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/permission_overlay" />
+            <TextView
+                android:id="@+id/statusOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnFixOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_fix"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <!-- Accessibility permission row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/permission_accessibility" />
+            <TextView
+                android:id="@+id/statusAccessibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnFixAccessibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_fix"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <!-- Notification permission row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/permission_notifications" />
+            <TextView
+                android:id="@+id/statusNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnFixNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_fix"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <!-- Hint -->
+        <TextView
+            android:id="@+id/txtHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_permissions"
+            android:textColor="#FFFF5722"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Action buttons -->
+        <Button
+            android:id="@+id/btnRun"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_run"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/btn_close"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Settings section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- target_package -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="target_package" android:textSize="12sp" />
+        <EditText android:id="@+id/editTargetPackage" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:layout_marginBottom="8dp" />
+
+        <!-- post_launch_delay_ms -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="post_launch_delay_ms (0–5000)" android:textSize="12sp" />
+        <EditText android:id="@+id/editPostLaunchDelay" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <!-- poll_interval_ms -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="poll_interval_ms (100–1000)" android:textSize="12sp" />
+        <EditText android:id="@+id/editPollInterval" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <!-- max_attempts -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="max_attempts (5–60)" android:textSize="12sp" />
+        <EditText android:id="@+id/editMaxAttempts" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <!-- gate_grace_ms -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="gate_grace_ms" android:textSize="12sp" />
+        <EditText android:id="@+id/editGateGrace" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <!-- coord_x_percent -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="coord_x_percent (0–100)" android:textSize="12sp" />
+        <EditText android:id="@+id/editCoordX" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <!-- coord_y_percent -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="coord_y_percent (0–100)" android:textSize="12sp" />
+        <EditText android:id="@+id/editCoordY" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <!-- Switches -->
+        <Switch android:id="@+id/switchCoordFallback" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="use_coordinate_fallback" android:layout_marginBottom="4dp" />
+        <Switch android:id="@+id/switchCloseBackGestures" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="close_with_back_gestures" android:layout_marginBottom="4dp" />
+
+        <!-- close_gesture_count -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="close_gesture_count" android:textSize="12sp" />
+        <EditText android:id="@+id/editCloseGestureCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:layout_marginBottom="8dp" />
+
+        <Switch android:id="@+id/switchForceStop" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="force_stop_after_close" android:layout_marginBottom="4dp" />
+        <Switch android:id="@+id/switchVerbose" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="verbose_logging" android:layout_marginBottom="16dp" />
+
+        <!-- Copy intent button -->
+        <Button
+            android:id="@+id/btnCopyIntent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_copy_intent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Log section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_log"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btnClearLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_clear_log"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/logScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#1A000000"
+            android:padding="8dp">
+            <TextView
+                android:id="@+id/txtLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textSize="11sp" />
+        </ScrollView>
+
+    </LinearLayout>
+</ScrollView>
